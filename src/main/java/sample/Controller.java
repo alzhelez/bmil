@@ -1,5 +1,6 @@
 package sample;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
@@ -15,6 +16,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.util.*;
@@ -62,7 +64,6 @@ public class Controller {
         passwordService = new PasswordService();
         allKeyPressed = new ArrayList<>();
     }
-
 
     public void onKeyReleased(KeyEvent keyEvent) {
         KeyEntity k = passwordService.getKeyEntity(keyEvent.getText());
@@ -156,5 +157,11 @@ public class Controller {
         controller.initialize(vector);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>(){
+            @Override
+            public void handle(WindowEvent event) {
+
+            }
+        });
     }
 }

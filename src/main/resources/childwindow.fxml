@@ -12,5 +12,6 @@
       <Label layoutX="10.0" layoutY="44.0" prefHeight="18.0" prefWidth="41.0" text="Почта" />
       <Label layoutX="10.0" layoutY="72.0" prefHeight="18.0" prefWidth="50.0" text="Пароль" />
       <PasswordField fx:id="password" layoutX="76.0" layoutY="68.0" />
+      <RadioButton fx:id="log" layoutX="234.0" layoutY="15.0" mnemonicParsing="false" text="Log in" />
    </children>
 </AnchorPane>
